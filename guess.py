@@ -8,9 +8,9 @@ def get_integer(prompt):
             return int(number)
 
 
-highest = 100
-EASY_LIVES = 10
-HARD_LIVES = 5
+highest = 1000
+EASY_LIVES = 15
+HARD_LIVES = 10
 answer = random.randint(1, 100)
 
 print("Welcome to the Number Guessing Game!")
@@ -18,8 +18,8 @@ print(f"I'm thinking of a number between 1 and {highest}.")
 
 valid_levels = ['1', '2']
 level = 0
-print("1... Easy (10 guesses)")
-print("2... Hard (5 guesses)")
+print(f"1... Easy ({EASY_LIVES} guesses)")
+print(f"2... Hard ({HARD_LIVES} guesses)")
 while level not in valid_levels:
     level = input("Choose your level ")
 
