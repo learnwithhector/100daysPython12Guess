@@ -9,6 +9,8 @@ def get_integer(prompt):
 
 
 highest = 100
+EASY_LIVES = 10
+HARD_LIVES = 5
 answer = random.randint(1, 100)
 
 print("Welcome to the Number Guessing Game!")
@@ -21,7 +23,7 @@ print("2... Hard (5 guesses)")
 while level not in valid_levels:
     level = input("Choose your level ")
 
-lives = 10 if level == '1' else 5
+lives = EASY_LIVES if level == '1' else HARD_LIVES
 
 while lives > 0:
     plural = 's' if lives != 1 else ''
